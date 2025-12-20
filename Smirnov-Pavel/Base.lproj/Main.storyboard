@@ -536,22 +536,94 @@ questions for you.</string>
                                 <viewLayoutGuide key="contentLayoutGuide" id="KSU-nf-VPb"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="8em-vu-cmt"/>
                             </scrollView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DMg-g8-AL9">
-                                <rect key="frame" x="0.0" y="177" width="393" height="592"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wf7-U9-lza">
+                                <rect key="frame" x="16" y="181" width="361" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cpT-Vk-bSF">
+                                    <size key="itemSize" width="214" height="292"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="Clr-KT-aKv" customClass="ProductCollectionViewCell" customModule="Smirnov_Pavel" customModuleProvider="target">
+                                        <rect key="frame" x="73.666666666666671" y="0.0" width="214" height="292"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8e6-F4-NaJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="214" height="292"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b5fbb9f936233dfa36bd9309633af8a8e5ba51d9" translatesAutoresizingMaskIntoConstraints="NO" id="rz0-BP-nkC">
+                                                    <rect key="frame" x="-44" y="0.0" width="305" height="176"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sYt-9C-DZ1">
+                                                    <rect key="frame" x="51.333333333333485" y="15" width="75" height="34.333333333333336"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BestSeller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOj-r7-tKP">
+                                                    <rect key="frame" x="8" y="176" width="77" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6c-ci-wHm">
+                                                    <rect key="frame" x="8" y="205" width="46" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProductName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhW-mo-68H">
+                                                    <rect key="frame" x="8" y="234" width="106" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p23-rr-OFY">
+                                                    <rect key="frame" x="8" y="263" width="39" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeI-rR-zny">
+                                                    <rect key="frame" x="171" y="8" width="35" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" cornerStyle="capsule">
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </backgroundConfiguration>
+                                                        <color key="baseForegroundColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="214" height="292"/>
+                                        <connections>
+                                            <outlet property="bestsellerBadge" destination="hOj-r7-tKP" id="7uN-y0-rPQ"/>
+                                            <outlet property="brandLabel" destination="A6c-ci-wHm" id="H5x-CW-bCt"/>
+                                            <outlet property="containerView" destination="8e6-F4-NaJ" id="ndN-gR-w0o"/>
+                                            <outlet property="likeButton" destination="UeI-rR-zny" id="eQM-gI-7pz"/>
+                                            <outlet property="priceLabel" destination="p23-rr-OFY" id="4FT-zI-pKZ"/>
+                                            <outlet property="productImageView" destination="rz0-BP-nkC" id="4aU-Vr-f8t"/>
+                                            <outlet property="productNameLabel" destination="XhW-mo-68H" id="Khe-FN-4Z0"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rnY-0l-Nvw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3OC-2X-aWA" firstAttribute="leading" secondItem="rnY-0l-Nvw" secondAttribute="leading" id="3nh-zy-yvz"/>
-                            <constraint firstItem="DMg-g8-AL9" firstAttribute="trailing" secondItem="rnY-0l-Nvw" secondAttribute="trailing" id="49j-yB-If3"/>
-                            <constraint firstItem="DMg-g8-AL9" firstAttribute="leading" secondItem="rnY-0l-Nvw" secondAttribute="leading" id="LwA-ZC-F68"/>
                             <constraint firstItem="3OC-2X-aWA" firstAttribute="top" secondItem="rnY-0l-Nvw" secondAttribute="top" id="StD-tV-XKz"/>
                             <constraint firstItem="rnY-0l-Nvw" firstAttribute="bottom" secondItem="3OC-2X-aWA" secondAttribute="bottom" constant="579" id="WRV-fk-B19"/>
-                            <constraint firstItem="DMg-g8-AL9" firstAttribute="top" secondItem="rnY-0l-Nvw" secondAttribute="top" constant="74" id="Wlw-cd-Wpw"/>
                             <constraint firstItem="3OC-2X-aWA" firstAttribute="trailing" secondItem="rnY-0l-Nvw" secondAttribute="trailing" id="pwO-m2-guf"/>
-                            <constraint firstItem="DMg-g8-AL9" firstAttribute="bottom" secondItem="rnY-0l-Nvw" secondAttribute="bottom" id="yxc-Ty-her"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="square" catalog="system" id="bZ0-HL-lOo"/>
