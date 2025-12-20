@@ -28,26 +28,22 @@ class ShopViewController: UIViewController {
     @IBOutlet weak var firstCollectionView: UICollectionView!
     @IBOutlet weak var secondCollectionView: UICollectionView!
     
-    // Данные для первого CollectionView
     let firstItems = [
-        FirstShopItem(imageName: "nike_sportswear", text: "text1"),
-        FirstShopItem(imageName: "nike_sportswear", text: "text2")
+        FirstShopItem(imageName: "0cfdee7b0e7e0d09887af6e3ad0d36fe437164d6", text: "Best Sellers"),
+        FirstShopItem(imageName: "d04afce40d1dc42548cbfbcee1edfe898ef42f80", text: "Featured in Nike Air")
     ]
     
-    // Данные для второго CollectionView
     let secondItems = [
-        SecondShopItem(imageName: "Runner", text: "product1"),
-        SecondShopItem(imageName: "Runner", text: "product2")
+        SecondShopItem(imageName: "Runner", text: "New & Featured"),
+        SecondShopItem(imageName: "Runner", text: "Shoes")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Настройка первого CollectionView
         firstCollectionView.dataSource = self
         firstCollectionView.delegate = self
         
-        // Настройка второго CollectionView
         secondCollectionView.dataSource = self
         secondCollectionView.delegate = self
     }
@@ -56,7 +52,6 @@ class ShopViewController: UIViewController {
 // MARK: - UICollectionViewDataSource
 extension ShopViewController: UICollectionViewDataSource {
     
-    // Определяем какой CollectionView запрашивает данные
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case firstCollectionView:

@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="132" id="Wjc-eX-v56"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faX-2I-dcj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faX-2I-dcj">
                                 <rect key="frame" x="17" y="569" width="300" height="165"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,7 +41,7 @@
                                 <string key="text">Nike App 
 Bringing Nike Members the best products, inspiration and stories in sport.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGB-FJ-BcA">
@@ -186,7 +186,7 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
                                     <segue destination="mWm-GX-4kk" kind="show" id="arV-Lq-S7v"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-ro-Drp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-ro-Drp">
                                 <rect key="frame" x="26" y="120" width="342" height="195"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -299,16 +299,23 @@ questions for you.</string>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1Y-Qw-BBK">
-                                <rect key="frame" x="159" y="783" width="75" height="35"/>
+                                <rect key="frame" x="158.33333333333334" y="772.66666666666663" width="76.666666666666657" height="45.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="UF6-V9-lWD" kind="show" id="Zuq-Hw-QF2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="chQ-dy-iFX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="m1Y-Qw-BBK" firstAttribute="centerX" secondItem="vKO-Ib-m94" secondAttribute="centerX" id="JT1-9T-MZ6"/>
                             <constraint firstItem="vKO-Ib-m94" firstAttribute="centerX" secondItem="bqS-nY-r5U" secondAttribute="centerX" id="Ucp-4M-UhY"/>
@@ -380,7 +387,7 @@ questions for you.</string>
                                     <segment title="Kids"/>
                                 </segments>
                             </segmentedControl>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NEf-tW-LTE">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NEf-tW-LTE">
                                 <rect key="frame" x="0.0" y="282" width="393" height="288"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -398,7 +405,7 @@ questions for you.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="220" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="37753fbfbc5f1af7f1accf29c6598652ea21fcf0" translatesAutoresizingMaskIntoConstraints="NO" id="RHI-Aw-elx">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0cfdee7b0e7e0d09887af6e3ad0d36fe437164d6" translatesAutoresizingMaskIntoConstraints="NO" id="RHI-Aw-elx">
                                                     <rect key="frame" x="8" y="0.0" width="212" height="220"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -420,7 +427,7 @@ questions for you.</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0BN-nQ-oKf">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0BN-nQ-oKf">
                                 <rect key="frame" x="0.0" y="578" width="393" height="293"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -442,7 +449,7 @@ questions for you.</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="111"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="New n featured" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ole-OL-Uvg">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="New n featured" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ole-OL-Uvg">
                                                     <rect key="frame" x="20" y="38" width="144" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -492,7 +499,7 @@ questions for you.</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3OC-2X-aWA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OC-2X-aWA">
                                 <rect key="frame" x="0.0" y="103" width="393" height="87"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bab-cm-p8m">
@@ -561,7 +568,7 @@ questions for you.</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gG-L1-1HJ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gG-L1-1HJ">
                                 <rect key="frame" x="0.0" y="103" width="393" height="87"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afd-YG-CmR">
@@ -643,6 +650,7 @@ questions for you.</string>
     <resources>
         <image name="09374fc43c944bc25d1da9dad566362f 1-2" width="125" height="36.666667938232422"/>
         <image name="0b07ddbee9221aead48a872032e53fb874c9209a" width="188" height="235"/>
+        <image name="0cfdee7b0e7e0d09887af6e3ad0d36fe437164d6" width="188" height="250.66667175292969"/>
         <image name="22e8b51655b44b0d339673b13f5310696797a2be" width="166.66667175292969" height="250"/>
         <image name="37753fbfbc5f1af7f1accf29c6598652ea21fcf0" width="623.33331298828125" height="853.33331298828125"/>
         <image name="3980d6c1d596a8483bdf93e7de7ea4a80597fadb" width="288" height="360"/>

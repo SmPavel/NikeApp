@@ -15,7 +15,6 @@ struct Category {
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // Добавьте @IBOutlet для таблицы из storyboard
         @IBOutlet weak var tableView: UITableView!
     
     let categories: [Category] = [
@@ -35,14 +34,12 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func setupTableView() {
-          // Настраиваем таблицу из storyboard
           tableView.delegate = self
           tableView.dataSource = self
           tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CategoryCell")
-          
-          // Дополнительные настройки
           tableView.rowHeight = 70
           tableView.separatorInset = UIEdgeInsets(top: 0, left: 70, bottom: 0, right: 0)
+          tableView.backgroundColor = UIColor.black
       }
     
     // MARK: - UITableViewDataSource
@@ -56,10 +53,11 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         let category = categories[indexPath.row]
         
         cell.textLabel?.text = category.name
+        cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.font = UIFont.systemFont(ofSize: 16)
         cell.accessoryType = .disclosureIndicator
-        
-        // Создаем круглое изображение
+        cell.backgroundColor = UIColor.black
+    
         if let circularImage = createCircularImageFromAssets(
             imageName: category.imageName,
             size: CGSize(width: 50, height: 50)
@@ -73,9 +71,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - Создание круглого изображения
     
     private func createCircularImageFromAssets(imageName: String, size: CGSize) -> UIImage? {
-        // Загружаем изображение из Assets
         guard let originalImage = UIImage(named: imageName) else {
-            print("⚠️ Image not found: \(imageName)")
             return createPlaceholderCircle(size: size)
         }
         
@@ -84,11 +80,9 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         return renderer.image { context in
             let rect = CGRect(origin: .zero, size: size)
             
-            // Создаем круглую маску
             let path = UIBezierPath(ovalIn: rect)
             path.addClip()
             
-            // Рисуем изображение
             originalImage.draw(in: rect)
         }
     }
