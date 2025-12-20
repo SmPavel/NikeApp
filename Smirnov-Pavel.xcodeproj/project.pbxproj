@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04302BA22ED1CA7B006CA546 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 04302BA12ED1CA7B006CA546 /* products.json */; };
+		043082552EDB121C00FA1156 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043082542EDB121C00FA1156 /* CategoryViewController.swift */; };
+		0437A3562EBF639700F0E804 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437A3552EBF639700F0E804 /* SecondViewController.swift */; };
 		0482769F2EB6345300A25720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482769E2EB6345300A25720 /* AppDelegate.swift */; };
 		048276A12EB6345300A25720 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048276A02EB6345300A25720 /* SceneDelegate.swift */; };
 		048276A32EB6345300A25720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048276A22EB6345300A25720 /* ViewController.swift */; };
 		048276A62EB6345300A25720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048276A42EB6345300A25720 /* Main.storyboard */; };
 		048276A82EB6345400A25720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048276A72EB6345400A25720 /* Assets.xcassets */; };
 		048276AB2EB6345400A25720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048276A92EB6345400A25720 /* LaunchScreen.storyboard */; };
+		04C9AD9B2EE456C7009F22FA /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9AD9A2EE456C7009F22FA /* ShopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04302BA12ED1CA7B006CA546 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		043082542EDB121C00FA1156 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		0437A3552EBF639700F0E804 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0482769B2EB6345300A25720 /* Smirnov-Pavel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smirnov-Pavel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0482769E2EB6345300A25720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048276A02EB6345300A25720 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,7 @@
 		048276A72EB6345400A25720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048276AA2EB6345400A25720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048276AC2EB6345400A25720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C9AD9A2EE456C7009F22FA /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 		0482769D2EB6345300A25720 /* Smirnov-Pavel */ = {
 			isa = PBXGroup;
 			children = (
+				04C9AD9A2EE456C7009F22FA /* ShopViewController.swift */,
+				043082542EDB121C00FA1156 /* CategoryViewController.swift */,
 				0482769E2EB6345300A25720 /* AppDelegate.swift */,
 				048276A02EB6345300A25720 /* SceneDelegate.swift */,
 				048276A22EB6345300A25720 /* ViewController.swift */,
@@ -63,6 +73,8 @@
 				048276A72EB6345400A25720 /* Assets.xcassets */,
 				048276A92EB6345400A25720 /* LaunchScreen.storyboard */,
 				048276AC2EB6345400A25720 /* Info.plist */,
+				0437A3552EBF639700F0E804 /* SecondViewController.swift */,
+				04302BA12ED1CA7B006CA546 /* products.json */,
 			);
 			path = "Smirnov-Pavel";
 			sourceTree = "<group>";
@@ -126,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				048276AB2EB6345400A25720 /* LaunchScreen.storyboard in Resources */,
+				04302BA22ED1CA7B006CA546 /* products.json in Resources */,
 				048276A82EB6345400A25720 /* Assets.xcassets in Resources */,
 				048276A62EB6345300A25720 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043082552EDB121C00FA1156 /* CategoryViewController.swift in Sources */,
+				0437A3562EBF639700F0E804 /* SecondViewController.swift in Sources */,
 				048276A32EB6345300A25720 /* ViewController.swift in Sources */,
 				0482769F2EB6345300A25720 /* AppDelegate.swift in Sources */,
 				048276A12EB6345300A25720 /* SceneDelegate.swift in Sources */,
+				04C9AD9B2EE456C7009F22FA /* ShopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
