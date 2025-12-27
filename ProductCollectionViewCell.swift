@@ -46,7 +46,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
 }
 
 extension UIImageView {
-    func setImage(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit, complition: ((UIImage) -> Void)?) ->
+    func setImage(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit, completion: ((UIImage) -> Void)?) ->
     URLSessionDataTask {
     contentMode = mode
         let task = URLSession.shared.dataTask(with: url) { data, response, error in

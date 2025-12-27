@@ -15,7 +15,7 @@ struct Product: Decodable {
     var isLiked: Bool
     var isBestseller: Bool
     
-    enum codingKeys: String, CodingKeys{
+    enum codingKeys: String, CodingKey{
         case brand
         case productName = "product_name"
         case price
@@ -28,5 +28,9 @@ struct Product: Decodable {
         self.brand = try container.decode(String.self, forKey: .brand)
         self.productName = try container.decode(String.self, forKey: .productName)
         self.price = try container.decode(Double.self, forKey: .price)
+        self.quantity = try container.decode(Int.self, forKey: .items_left)
+        self.imageUrl = try container.decode(String.self, forKey: .image_url)
+        self.isLiked = try container.decode(Bool.self, forKey: .is_liked)
+        self.isBestseller = try container.decode(Bool.self, forKey: .is_bestseller)
     }
 }
