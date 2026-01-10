@@ -15,6 +15,10 @@ struct Product: Decodable {
     var isLiked: Bool
     var isBestseller: Bool
     
+    var productIdentifier: String {
+           return "\(brand)_\(productName)"
+    }
+    
     enum codingKeys: String, CodingKey{
         case brand
         case productName = "product_name"
@@ -23,6 +27,7 @@ struct Product: Decodable {
         case image_url
         case is_liked, is_bestseller
     }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: codingKeys.self)
         self.brand = try container.decode(String.self, forKey: .brand)

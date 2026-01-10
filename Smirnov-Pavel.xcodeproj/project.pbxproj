@@ -13,6 +13,7 @@
 		045D2B5B2EFFF4F9009E5F22 /* ProductsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D2B582EFFF4F9009E5F22 /* ProductsManager.swift */; };
 		045D2B5C2EFFF4F9009E5F22 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D2B592EFFF4F9009E5F22 /* HomeViewController.swift */; };
 		045D2B5D2EFFF4F9009E5F22 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D2B5A2EFFF4F9009E5F22 /* ApiManager.swift */; };
+		045FCB1A2F12868D00AB19BA /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045FCB192F12868D00AB19BA /* FavouritesViewController.swift */; };
 		0482769F2EB6345300A25720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482769E2EB6345300A25720 /* AppDelegate.swift */; };
 		048276A12EB6345300A25720 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048276A02EB6345300A25720 /* SceneDelegate.swift */; };
 		048276A32EB6345300A25720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048276A22EB6345300A25720 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		045D2B582EFFF4F9009E5F22 /* ProductsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsManager.swift; sourceTree = "<group>"; };
 		045D2B592EFFF4F9009E5F22 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		045D2B5A2EFFF4F9009E5F22 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		045FCB192F12868D00AB19BA /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		0482769B2EB6345300A25720 /* Smirnov-Pavel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smirnov-Pavel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0482769E2EB6345300A25720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048276A02EB6345300A25720 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				0437A3552EBF639700F0E804 /* SecondViewController.swift */,
 				04302BA12ED1CA7B006CA546 /* products.json */,
 				0483BBDB2EF6C6A300D933AC /* Inter-VariableFont_opsz,wght.ttf */,
+				045FCB192F12868D00AB19BA /* FavouritesViewController.swift */,
 			);
 			path = "Smirnov-Pavel";
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045FCB1A2F12868D00AB19BA /* FavouritesViewController.swift in Sources */,
 				043082552EDB121C00FA1156 /* CategoryViewController.swift in Sources */,
 				0437A3562EBF639700F0E804 /* SecondViewController.swift in Sources */,
 				0483BBE42EF6E12A00D933AC /* ProductCollectionViewCell.swift in Sources */,
