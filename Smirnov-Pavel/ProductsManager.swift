@@ -2,90 +2,69 @@ import Foundation
 
 class ProductsManager {
     static let shared = ProductsManager()
+    private var products: [Product] = []
     
-    private var allProducts: [Product] = []
-    private let favoritesKey = "favoriteProducts"
-    
-    private init() {
-        loadFavorites()
-    }
-    
-    private func loadFavorites() {
-        // Позже загрузим сохраненные избранные
-    }
-    
-    func fetchProducts(completion: @escaping (Result<[Product], Error>) -> Void) {
+    func fetchProducts(completion: @escaping ([Product]) -> Void) {
         guard let url = Bundle.main.url(forResource: "products", withExtension: "json") else {
-            let error = NSError(
-                domain: "ProductsManager",
-                code: 404,
-                userInfo: [NSLocalizedDescriptionKey: "Файл products.json не найден"]
-            )
-            DispatchQueue.main.async {
-                completion(.failure(error))
-            }
+            completion([])
             return
         }
         
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global().async {
             do {
                 let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                var products = try decoder.decode([Product].self, from: data)
+                var products = try JSONDecoder().decode([Product].self, from: data)
                 
-                // Восстанавливаем сохраненные состояния избранного
-                let savedFavorites = UserDefaults.standard.array(forKey: self.favoritesKey) as? [String] ?? []
+                // Загружаем сохраненные лайки
+                let savedLikes = self.loadSavedLikes()
+                
+                // Применяем сохраненные лайки
                 for i in 0..<products.count {
-                    if savedFavorites.contains(products[i].productIdentifier) {
-                        products[i].isLiked = true
+                    let id = products[i].productIdentifier
+                    if savedLikes[id] != nil {
+                        products[i].isLiked = savedLikes[id]!
                     }
                 }
                 
-                self.allProducts = products
+                self.products = products
                 
                 DispatchQueue.main.async {
-                    completion(.success(products))
+                    completion(products)
                 }
             } catch {
                 DispatchQueue.main.async {
-                    completion(.failure(error))
+                    completion([])
                 }
             }
         }
     }
     
-    func saveFavoriteState() {
-        let favoriteIdentifiers = allProducts
-            .filter { $0.isLiked }
-            .map { $0.productIdentifier }
-        UserDefaults.standard.set(favoriteIdentifiers, forKey: favoritesKey)
-    }
-    
-    func getFavorites() -> [Product] {
-        return allProducts.filter { $0.isLiked }
-    }
-    
-    func toggleFavorite(for productIdentifier: String) {
-        if let index = allProducts.firstIndex(where: { $0.productIdentifier == productIdentifier }) {
-            allProducts[index].isLiked.toggle()
+    func toggleFavorite(for productId: String) {
+        if let index = products.firstIndex(where: { $0.productIdentifier == productId }) {
+            products[index].isLiked.toggle()
             
-            // Сохраняем состояние
-            saveFavoriteState()
+            // Сохраняем изменение
+            saveLike(for: productId, isLiked: products[index].isLiked)
             
-            // Отправляем уведомление
-            NotificationCenter.default.post(
-                name: NSNotification.Name("FavoritesUpdated"),
-                object: nil,
-                userInfo: ["productIdentifier": productIdentifier]
-            )
+            NotificationCenter.default.post(name: Notification.Name("FavoritesChanged"), object: nil)
         }
     }
     
-    func isFavorite(productIdentifier: String) -> Bool {
-        return allProducts.first(where: { $0.productIdentifier == productIdentifier })?.isLiked ?? false
+    private func saveLike(for productId: String, isLiked: Bool) {
+        var savedLikes = loadSavedLikes()
+        savedLikes[productId] = isLiked
+        UserDefaults.standard.set(savedLikes, forKey: "ProductLikes")
+    }
+    
+    private func loadSavedLikes() -> [String: Bool] {
+        return UserDefaults.standard.dictionary(forKey: "ProductLikes") as? [String: Bool] ?? [:]
+    }
+    
+    func getFavorites() -> [Product] {
+        return products.filter { $0.isLiked }
     }
     
     func getAllProducts() -> [Product] {
-        return allProducts
+        return products
     }
 }

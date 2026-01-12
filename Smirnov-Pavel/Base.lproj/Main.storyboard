@@ -804,6 +804,15 @@ questions for you.</string>
                                                 <constraint firstItem="nzL-FY-5hH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BC1-hU-PEb" secondAttribute="leading" id="bij-oy-cbK"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="bFavourite" destination="nzL-FY-5hH" id="nkh-jW-rVh"/>
+                                            <outlet property="ivLogo" destination="Qbd-oV-ktK" id="v6i-kE-jOK"/>
+                                            <outlet property="lblBestseller" destination="g24-qu-c5C" id="MuE-82-Nul"/>
+                                            <outlet property="lblPrice" destination="KIw-aY-J9L" id="fgd-ma-e9D"/>
+                                            <outlet property="lblSoldout" destination="OP0-tL-WGj" id="Ybg-vE-NNT"/>
+                                            <outlet property="lblSubtitle" destination="hfX-kv-r8X" id="JHd-Ba-Eqg"/>
+                                            <outlet property="lblTitle" destination="nhH-zq-F29" id="HAK-cB-0oT"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
