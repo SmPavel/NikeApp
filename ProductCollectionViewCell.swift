@@ -16,18 +16,15 @@ class ProductCollectionViewCell: UICollectionViewCell {
             guard let p = product else { return }
             productId = p.productIdentifier
             
-            // Устанавливаем данные
             lblTitle.text = p.brand
             lblSubtitle.text = p.productName
             lblSoldout.isHidden = p.quantity > 0
             lblBestseller.isHidden = !p.isBestseller
             lblPrice.text = String(format: "$%.2f", p.price)
             
-            // Кнопка
             let heartImage = p.isLiked ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
             bFavourite.setImage(heartImage, for: .normal)
             
-            // Картинка
             loadImage(from: p.imageUrl)
         }
     }
@@ -41,13 +38,11 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @objc func favoriteTapped() {
         guard let id = productId else { return }
         
-        // Переключаем
         ProductsManager.shared.toggleFavorite(for: id)
         
-        // Обновляем кнопку
         if var p = product {
             p.isLiked.toggle()
-            self.product = p // Это вызовет didSet с обновлением кнопки
+            self.product = p
         }
     }
     

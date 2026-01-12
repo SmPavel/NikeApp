@@ -15,10 +15,8 @@ class ProductsManager {
                 let data = try Data(contentsOf: url)
                 var products = try JSONDecoder().decode([Product].self, from: data)
                 
-                // Загружаем сохраненные лайки
                 let savedLikes = self.loadSavedLikes()
                 
-                // Применяем сохраненные лайки
                 for i in 0..<products.count {
                     let id = products[i].productIdentifier
                     if savedLikes[id] != nil {
@@ -43,7 +41,6 @@ class ProductsManager {
         if let index = products.firstIndex(where: { $0.productIdentifier == productId }) {
             products[index].isLiked.toggle()
             
-            // Сохраняем изменение
             saveLike(for: productId, isLiked: products[index].isLiked)
             
             NotificationCenter.default.post(name: Notification.Name("FavoritesChanged"), object: nil)

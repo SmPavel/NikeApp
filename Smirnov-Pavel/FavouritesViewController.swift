@@ -23,7 +23,6 @@ class FavoritesViewController: UIViewController {
     }
     
     @objc func loadFavorites() {
-        // Убедитесь что данные загружены в ProductsManager
         favorites = ProductsManager.shared.getFavorites()
         collectionView.reloadData()
     }
@@ -37,7 +36,6 @@ extension FavoritesViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCollectionViewCell
         
-        // Убедитесь что product устанавливается
         let product = favorites[indexPath.item]
         cell.product = product
         
